@@ -1,0 +1,10 @@
+c:\users\kbyrom\source\repos\AudioTest\AudioTest\bin\Debug\AudioTest.exe.config
+c:\users\kbyrom\source\repos\AudioTest\AudioTest\bin\Debug\AudioTest.exe
+c:\users\kbyrom\source\repos\AudioTest\AudioTest\bin\Debug\AudioTest.pdb
+c:\users\kbyrom\source\repos\AudioTest\AudioTest\bin\Debug\NAudio.dll
+c:\users\kbyrom\source\repos\AudioTest\AudioTest\bin\Debug\NAudio.xml
+c:\users\kbyrom\source\repos\AudioTest\AudioTest\obj\Debug\AudioTest.csprojAssemblyReference.cache
+c:\users\kbyrom\source\repos\AudioTest\AudioTest\obj\Debug\AudioTest.csproj.CoreCompileInputs.cache
+c:\users\kbyrom\source\repos\AudioTest\AudioTest\obj\Debug\AudioTest.csproj.CopyComplete
+c:\users\kbyrom\source\repos\AudioTest\AudioTest\obj\Debug\AudioTest.exe
+c:\users\kbyrom\source\repos\AudioTest\AudioTest\obj\Debug\AudioTest.pdb
