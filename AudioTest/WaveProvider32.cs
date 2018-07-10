@@ -53,11 +53,13 @@ namespace AudioTest
         public SineWaveProvider32()
         {
             Frequency = 1000;
-            Amplitude = 0.25f; // let's not hurt our ears            
+            Amplitude = 0.25f; // let's not hurt our ears   
+            this.WaveFunction = new SquareWaveFunction();
         }
 
         public float Frequency { get; set; }
         public float Amplitude { get; set; }
+        public IWaveFunction WaveFunction { get; set; }
 
         public override int Read(float[] buffer, int offset, int sampleCount)
         {
@@ -69,8 +71,13 @@ namespace AudioTest
             {
                 var rndVal = rnd.Next(3);
 
-                //var val = (float)(Amplitude * Math.Sin((rndVal * Math.PI * sample * Frequency) / sampleRate));
-                var val = (float)(Amplitude * Math.Sin((Math.PI * sample * Frequency) / sampleRate));
+                //var val = (float)(Amplitude * Math.Sin((2 * Math.PI * sample * Frequency) / sampleRate));
+
+                //var val = Math.Sin(Frequency * sample) >= 0 ? Amplitude : -1 * Amplitude;
+                //var val = (float)sample / sampleRate < 0.5f ? -Amplitude * Frequency : Amplitude * Frequency;//  (float)(Amplitude * Math.Sin((Math.PI * sample * Frequency) / sampleRate));
+                //Debug.WriteLine($"{val}");
+
+                var val = this.Amplitude * this.WaveFunction.GetValue(sample, sampleRate, this.Frequency);
 
                 buffer[n + offset] = val; //(float)(Amplitude * Math.Sin((2 * (Math.PI / 4) * sample * Frequency) / sampleRate));
                 
@@ -78,6 +85,29 @@ namespace AudioTest
                 if (sample >= sampleRate) sample = 0;
             }
             return sampleCount;
+        }
+    }
+
+    public interface IWaveFunction
+    {
+        float GetValue(int sampleCount, int sampleRate, float frequency);
+    }
+
+
+    public class SineWaveFunction : IWaveFunction
+    {
+        public float GetValue(int sample, int sampleRate, float frequency)
+        {
+            return (float)Math.Sin((2 * Math.PI * sample * frequency) / sampleRate);
+        }
+    }
+
+
+    public class SquareWaveFunction : IWaveFunction
+    {
+        public float GetValue(int sample, int sampleRate, float frequency)
+        {
+            return Math.Sin(frequency * sample) >= 0 ? 1 : -1;
         }
     }
 }

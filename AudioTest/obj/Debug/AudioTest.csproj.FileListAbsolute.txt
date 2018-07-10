@@ -8,3 +8,13 @@ c:\users\kbyrom\source\repos\AudioTest\AudioTest\obj\Debug\AudioTest.csproj.Core
 c:\users\kbyrom\source\repos\AudioTest\AudioTest\obj\Debug\AudioTest.csproj.CopyComplete
 c:\users\kbyrom\source\repos\AudioTest\AudioTest\obj\Debug\AudioTest.exe
 c:\users\kbyrom\source\repos\AudioTest\AudioTest\obj\Debug\AudioTest.pdb
+C:\Users\kevin\code\src\github.com\AudioTest\AudioTest\bin\Debug\AudioTest.exe.config
+C:\Users\kevin\code\src\github.com\AudioTest\AudioTest\bin\Debug\AudioTest.exe
+C:\Users\kevin\code\src\github.com\AudioTest\AudioTest\bin\Debug\AudioTest.pdb
+C:\Users\kevin\code\src\github.com\AudioTest\AudioTest\bin\Debug\NAudio.dll
+C:\Users\kevin\code\src\github.com\AudioTest\AudioTest\bin\Debug\NAudio.xml
+C:\Users\kevin\code\src\github.com\AudioTest\AudioTest\obj\Debug\AudioTest.csprojAssemblyReference.cache
+C:\Users\kevin\code\src\github.com\AudioTest\AudioTest\obj\Debug\AudioTest.csproj.CoreCompileInputs.cache
+C:\Users\kevin\code\src\github.com\AudioTest\AudioTest\obj\Debug\AudioTest.csproj.CopyComplete
+C:\Users\kevin\code\src\github.com\AudioTest\AudioTest\obj\Debug\AudioTest.exe
+C:\Users\kevin\code\src\github.com\AudioTest\AudioTest\obj\Debug\AudioTest.pdb
