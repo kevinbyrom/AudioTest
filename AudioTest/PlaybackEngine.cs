@@ -12,7 +12,7 @@ namespace AudioTest
 {
     public class PlaybackEngine : IWaveProvider
     {
-        int sample;
+        
         private WaveFormat waveFormat;
 
         public WaveFormat WaveFormat
@@ -24,6 +24,9 @@ namespace AudioTest
         public float Frequency { get; set; }
         public float Amplitude { get; set; }
         public IWaveFunction WaveFunction { get; set; }
+
+        int sample;
+        int totalSamples;
 
 
         public PlaybackEngine() : this(44100, 1)
@@ -40,9 +43,9 @@ namespace AudioTest
             //this.WaveFunction = new TanWaveFunction();
             //this.WaveFunction = new TriangleWaveFunction();
             //this.WaveFunction = new NoiseWaveFunction();
-            this.WaveFunction = new SawWaveFunction();
+            //this.WaveFunction = new SawWaveFunction();
             //this.WaveFunction = ComboWaveFunction.Create(new SineWaveFunction(), new SquareWaveFunction(), new NoiseWaveFunction(), new TanWaveFunction(), new CosWaveFunction());
-            //this.WaveFunction = ComboWaveFunction.Create(new SineWaveFunction(), new SquareWaveFunction(), new TanWaveFunction(), new CosWaveFunction());
+            this.WaveFunction = ComboWaveFunction.Create(new SineWaveFunction(), new SquareWaveFunction(), new TanWaveFunction(), new CosWaveFunction());
 
             SetWaveFormat(sampleRate, channels);
         }
@@ -76,6 +79,7 @@ namespace AudioTest
                 buffer[n + offset] = val; 
 
                 sample++;
+                totalSamples++;
                 if (sample >= sampleRate) sample = 0; // One second of data has passed
             }
             return sampleCount;

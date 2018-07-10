@@ -23,13 +23,13 @@ namespace AudioTest
         {
             if (waveOut == null)
             {
-                var sineWaveProvider = new PlaybackEngine();
-                sineWaveProvider.SetWaveFormat(16000, 1); // 16kHz mono
+                var engine = new PlaybackEngine();
+                engine.SetWaveFormat(16000, 1); // 16kHz mono
                 //sineWaveProvider.SetWaveFormat(10000, 1); // 16kHz mono
-                sineWaveProvider.Frequency = (float)440;
-                sineWaveProvider.Amplitude = 0.25f;
+                engine.Frequency = (float)440;
+                engine.Amplitude = 0.25f;
                 waveOut = new WaveOut();
-                waveOut.Init(sineWaveProvider);
+                waveOut.Init(engine);
                 waveOut.Play();
             }
             else
