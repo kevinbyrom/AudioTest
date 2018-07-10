@@ -48,6 +48,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PlaybackEngine.cs" />
+    <Compile Include="WaveFunctions\Basic\SawtoothWave.cs" />
+    <Compile Include="WaveFunctions\Basic\SquareWave.cs" />
+    <Compile Include="WaveFunctions\Basic\TanWave.cs" />
+    <Compile Include="WaveFunctions\Composition\ComboWave.cs" />
+    <Compile Include="WaveFunctions\Composition\SequenceWave.cs" />
+    <Compile Include="WaveFunctions\Effects\DarkWave.cs" />
+    <Compile Include="WaveFunctions\Basic\TriangleWave.cs" />
+    <Compile Include="WaveFunctions\Basic\CosineWave.cs" />
+    <Compile Include="WaveFunctions\Effects\NoiseWave.cs" />
+    <Compile Include="WaveFunctions\IWaveFunction.cs" />
+    <Compile Include="WaveFunctions\Basic\SineWave.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
