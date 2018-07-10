@@ -23,7 +23,7 @@ namespace AudioTest
         {
             if (waveOut == null)
             {
-                var sineWaveProvider = new SineWaveProvider32();
+                var sineWaveProvider = new PlaybackEngine();
                 sineWaveProvider.SetWaveFormat(16000, 1); // 16kHz mono
                 //sineWaveProvider.SetWaveFormat(10000, 1); // 16kHz mono
                 sineWaveProvider.Frequency = (float)440;
